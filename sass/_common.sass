@@ -1,0 +1,62 @@
+//Header
+.header
+  height: 130px
+  background-color: $bg-block
+  position: relative
+  .header-nav-bar-left
+    width: 40%
+    float: left
+  .header-nav__social
+    float: right
+    margin-top: 15px
+    +clearfix
+    li
+      float: left
+      +border-radius(50%)
+      background-color: $bg-social
+      height: 30px
+      width: 30px
+      position: relative
+      margin: 0 4px
+      a
+        position: absolute
+        left: 50%
+        top: 50%
+        text-decoration: none
+        color: $bg-block
+        display: block
+        font-size: 19px
+      .fa-vk
+        margin: -10px 0 0 -10px
+      .fa-facebook
+        margin: -9px 0 0 -6px
+      .fa-instagram
+        margin: -9px 0 0 -9px
+      .fa-twitter
+        margin: -8px 0 0 -10px
+  .header-nav__left
+    font-family: PTSansNarrow
+    font-size: 14px
+    margin-top: 85px
+    +clearfix
+    li
+      float: left
+      margin: 0 10px 0 0
+      display: block
+      a
+        text-transform: uppercase
+        color: $color-base
+        padding: 3px 0
+        border-bottom: 1px solid $color-base
+        display: block
+        &:hover
+          text-decoration: none
+      .active
+        border-top: 2px solid #990000
+        color: #990000
+        margin-top: -2px
+  .header-logo
+    position: absolute
+    left: 50%
+    margin-left: -111px
+
