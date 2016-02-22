@@ -34,14 +34,14 @@
         margin: -9px 0 0 -9px
       .fa-twitter
         margin: -8px 0 0 -10px
-  .header-nav__left
+  .header-nav
     font-family: PTSansNarrow
     font-size: 14px
     margin-top: 85px
     +clearfix
     li
       float: left
-      margin: 0 10px 0 0
+      margin: 0 0 0 9px
       display: block
       a
         text-transform: uppercase
@@ -59,4 +59,25 @@
     position: absolute
     left: 50%
     margin-left: -111px
-
+  .header-nav-bar-right
+    width: 40%
+    float: right
+    .header-nav
+      margin-top: 85px
+    .header-nav__right-list li:first-child
+      margin-left: 0
+    .schedule
+      color: #999
+      font-size: 14px
+      font-family: RobotoRegular
+      margin-top: 20px
+      float: left
+    .header-check
+      color: #990000
+      text-decoration: underline
+      font-size: 14px
+      font-family: RobotoCondensedBold
+      float: right
+      margin-top: 20px
+  .header-nav__left-list
+    float: right
