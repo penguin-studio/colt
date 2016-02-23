@@ -118,6 +118,18 @@
 .main-blocks
   padding: 0 25px 40px 25px
   background-color: $bg-block
+  .wrapp-check-online
+    text-align: center
+    margin-top: 40px
+    .check-online
+      margin: 0 auto
+      font-size: 18px
+      font-family: RobotoCondensedBold
+      padding: 5px 10px
+      border: 2px solid #990000
+      color: #990000
+      text-decoration: none
+      text-transform: $text-transform
   .main-blocks__title
     font-size: 26px
     color: $color-base
@@ -219,3 +231,43 @@
       height: 100%
       width: 100%
       display: block
+
+//Barber masters
+.lightSlider
+  li
+    position: relative
+    &:hover .bottom-menu
+      height: 122px
+      background-color: rgba(153,0,0,0.5)
+      .bottom-menu__name:after
+        display: none
+    .bottom-menu
+      position: absolute
+      display: block
+      width: 280px
+      height: 80px
+      bottom: 0
+      background-color: rgba(15,77,124,0.5)
+      text-align: center
+      color: $bg-base
+      text-shadow: 1px 3px 1px rgba(0,0,0,0.9)
+      text-transform: $text-transform
+      font-family: RobotoCondensedBold
+      @include transition(all 0.4s ease-in-out)
+      .bottom-menu__name
+        font-size: 18px
+        &:after
+          content: ''
+          display: block
+          height: 1px
+          width: 50px
+          margin: 10px auto 0 auto
+          background-color: $bg-base
+      .bottom-menu__name-desc
+        margin-bottom: 30px
+      .bottom-menu__link
+        color: $bg-base
+        font-family: RobotoCondensedRegular
+        font-size: 14px
+        text-decoration: underline
+

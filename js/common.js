@@ -8,4 +8,9 @@
         }
         return false;
     });
+
+    $(".lightSlider").lightSlider({
+        item: 4,
+        pager: false
+    });
 })();
