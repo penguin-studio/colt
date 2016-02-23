@@ -1,0 +1,20 @@
+diff a/index.html b/index.html	(rejected hunks)
+@@ -49,16 +49,15 @@
+         </div>
+     </div>
+ </header>
+-<<<<<<< HEAD
++
+ <section></section>
+-=======
++
+ <div class="container">
+   <p>
+     hello world
+   </p>
+ </div>
+ 
+->>>>>>> 4b667d8d7a688eb8839dfb7198247a33f77e0667
+ <!-- bower:js -->
+ <script src="js/jquery.min.js"></script>
+ <script src="js/common.js"></script>

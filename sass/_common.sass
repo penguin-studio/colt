@@ -1,3 +1,10 @@
+//Separator line
+.separator-line
+  background: url(../img/separator-line.png) no-repeat center
+  height: 79px
+  width: 100%
+  margin: 30px 0
+
 //Header
 .header
   height: 130px
@@ -44,7 +51,7 @@
       margin: 0 0 0 9px
       display: block
       a
-        text-transform: uppercase
+        text-transform: $text-transform
         color: $color-base
         padding: 3px 0
         border-bottom: 1px solid $color-base
@@ -59,6 +66,7 @@
     position: absolute
     left: 50%
     margin-left: -111px
+    z-index: 100
   .header-nav-bar-right
     width: 40%
     float: right
@@ -81,3 +89,133 @@
       margin-top: 20px
   .header-nav__left-list
     float: right
+
+//Slider
+.slider
+  position: relative
+  .go-to-down
+    position: absolute
+    height: 100px
+    width: 100px
+    background-color: $bg-block
+    +border-radius(50%)
+    left: 50%
+    margin-left: -50px
+    bottom: -50px
+    cursor: pointer
+    .go-to-down__nav
+      font-size: 50px
+      position: absolute
+      top: 50%
+      left: 50%
+      margin: -23px 0 0 -26px
+
+//Main
+.main
+  height: 100%
+  background: url(../img/main-bg.jpg) repeat
+  padding: 180px 0 55px 0
+.main-blocks
+  padding: 0 25px 40px 25px
+  background-color: $bg-block
+  .main-blocks__title
+    font-size: 26px
+    color: $color-base
+    text-transform: $text-transform
+    font-family: RobotoCondensedBold
+    text-align: center
+    padding: 30px 0 50px 0
+    margin: 0
+  .main-blocks-left
+    padding: 0
+  .main-blocks-right
+    padding: 0
+    .main-blocks-right__row
+      margin-top: 20px
+
+.link-box
+  position: relative
+  .link-box__title
+    font-size: 24px
+    color: $bg-base
+    font-family: RobotoCondensedBold
+    text-shadow: 1px 3px 1px rgba(0,0,0,0.9)
+    max-width: 350px
+    text-align: center
+    margin: 0 auto
+    text-transform: $text-transform
+.autobiography
+  background: url(../img/main-links/autobiography.png) no-repeat
+  background-size: contain
+  height: 430px
+  width: 570px
+  margin: 0 auto
+  .autobiography__title
+    position: absolute
+    bottom: 25px
+    left: 50%
+    margin-left: -175px
+.history
+  background: url(../img/main-links/history.png) no-repeat
+  .history__title
+    padding-top: 15px
+    font-size: 18px
+.ideas
+  background: url(../img/main-links/ideas.png) no-repeat
+  .ideas__title
+    font-size: 18px
+    position: absolute
+    bottom: 25px
+    left: 50%
+    margin-left: -57px
+.motivation
+  background: url(../img/main-links/motivation.png) no-repeat
+  .motivation__title
+    font-size: 18px
+    position: absolute
+    bottom: 25px
+    left: 50%
+    margin-left: -44px
+.people
+  background: url(../img/main-links/people.png) no-repeat
+  .people__title
+    font-size: 18px
+    position: absolute
+    bottom: 25px
+    left: 50%
+    margin-left: -83px
+.main-blocks__content
+  background-size: contain
+  height: 205px
+  width: 270px
+  &:hover .overlay
+    opacity: 1
+    background-color: rgba(153,0,0,0.6)
+  .overlay
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    overflow: hidden
+    @include transition(all 0.4s ease-in-out)
+    a
+      height: 100%
+      width: 100%
+      display: block
+.autobiography
+  &:hover .overlay
+    opacity: 1
+    background-color: rgba(153,0,0,0.6)
+  .overlay
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    overflow: hidden
+    @include transition(all 0.4s ease-in-out)
+    a
+      height: 100%
+      width: 100%
+      display: block
