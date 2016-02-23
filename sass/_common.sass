@@ -13,34 +13,6 @@
   .header-nav-bar-left
     width: 40%
     float: left
-  .header-nav__social
-    float: right
-    margin-top: 15px
-    +clearfix
-    li
-      float: left
-      +border-radius(50%)
-      background-color: $bg-social
-      height: 30px
-      width: 30px
-      position: relative
-      margin: 0 4px
-      a
-        position: absolute
-        left: 50%
-        top: 50%
-        text-decoration: none
-        color: $bg-block
-        display: block
-        font-size: 19px
-      .fa-vk
-        margin: -10px 0 0 -10px
-      .fa-facebook
-        margin: -9px 0 0 -6px
-      .fa-instagram
-        margin: -9px 0 0 -9px
-      .fa-twitter
-        margin: -8px 0 0 -10px
   .header-nav
     font-family: PTSansNarrow
     font-size: 14px
@@ -89,6 +61,34 @@
       margin-top: 20px
   .header-nav__left-list
     float: right
+.nav__social
+  float: right
+  margin-top: 15px
+  +clearfix
+  li
+    float: left
+    +border-radius(50%)
+    background-color: $bg-social
+    height: 30px
+    width: 30px
+    position: relative
+    margin: 0 4px
+    a
+      position: absolute
+      left: 50%
+      top: 50%
+      text-decoration: none
+      color: $bg-block
+      display: block
+      font-size: 19px
+    .fa-vk
+      margin: -10px 0 0 -10px
+    .fa-facebook
+      margin: -9px 0 0 -6px
+    .fa-instagram
+      margin: -9px 0 0 -9px
+    .fa-twitter
+      margin: -8px 0 0 -10px
 
 //Slider
 .slider
@@ -276,9 +276,65 @@
   font-size: 20px
   color: $color-base
   font-family: RobotoRegular
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5)
   a
     color: $color-base
 .map-wrapp
   text-align: center
+
+//Footer
+.footer
+  font-family: RobotoRegular
+  font-size: 24px
+  color: $color-base
+  .footer-address
+    &:before
+      content: ''
+      display: inline-block
+      background: url(../img/icons-se1a19f35ec.png) no-repeat
+      background-position: 0 -21px
+      height: 34px
+      width: 27px
+      margin-right: 10px
+  .footer-schedule
+    text-align: center
+  a
+    color: $color-base
+    text-decoration: none
+    &:hover
+      text-decoration: none
+      color: $color-base
+  .contact-us
+    text-align: center
+  .contact-us li:first-child:before
+    content: ''
+    display: inline-block
+    background: url(../img/icons-se1a19f35ec.png) no-repeat
+    background-position: 0 -55px
+    height: 39px
+    width: 36px
+    margin-right: 10px
+  .contact-us li:nth-child(2)
+    margin-left: 46px
+  .contact-us li:nth-child(3):before
+    content: ''
+    display: inline-block
+    background: url(../img/icons-se1a19f35ec.png) no-repeat
+    background-position: 0 0
+    height: 21px
+    width: 36px
+    margin: 0 10px -2px 0
+  .nav__social
+    float: none
+    margin: 0 110px
+    li
+      &:hover
+        background-color: #990000
+  .faq
+    text-align: center
+    margin-top: 15px
+    a
+      text-decoration: underline
+
 
 
