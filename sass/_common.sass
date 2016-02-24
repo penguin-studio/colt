@@ -131,7 +131,7 @@
       text-decoration: none
       text-transform: $text-transform
   .main-blocks__title
-    font-size: 26px
+    font-size: 35px
     color: $color-base
     text-transform: $text-transform
     font-family: RobotoCondensedBold
@@ -376,6 +376,34 @@
     overflow: hidden
   li:last-child
     margin-right: 0
+.panel
+  .panel-heading
+    padding: 0
+  .panel-body
+    padding: 0
+  .filter-open
+    display: block
+    padding: 10px 15px
+  .filter-open__list
+    margin-bottom: 0
+    li
+      &:hover
+        background-color: #6a8fab
+      a
+        padding: 10px
+        color: #999999
+        font-family: RobotoRegular
+        font-size: 18px
+        display: block
+        &:hover
+          text-decoration: none
+          color: $bg-base
+  .filter-open__size
+    li a
+      text-transform: $text-transform
+  .filter-open__price
+    li a
+      text-transform: none
 
 
 //Footer

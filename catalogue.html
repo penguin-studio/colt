@@ -55,7 +55,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 <div class="main-blocks col-md-12">
-                    <h2 class="main-blocks__title">Одяг</h2>
+                    <h1 class="main-blocks__title">Одяг</h1>
 	                <aside class="col-md-3">
 		                <div class="cart-label">
 			                <div class="cart-label__wrapp">
@@ -74,11 +74,78 @@
 				                <li><a href="#">Речі ручної роботи</a></li>
 				                <li><a href="#">Інструменти</a></li>
 			                </ul>
-			                <div class="categories-drop">
-				                <div class="categories-drop__item"></div>
-				                <div class="categories-drop__item"></div>
-				                <div class="categories-drop__item"></div>
-				                <div class="categories-drop__item"></div>
+			                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				                <div class="panel panel-default">
+					                <div class="panel-heading" role="tab" id="headingOne">
+						                <h4 class="panel-title">
+							                <a class="filter-open" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								                Ціна
+							                </a>
+						                </h4>
+					                </div>
+					                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+						                <div class="panel-body">
+							                <ul class="filter-open__list filter-open__price">
+								                <li><a href="#">за зростанням</a></li>
+								                <li><a href="#">за спаданням</a></li>
+							                </ul>
+						                </div>
+					                </div>
+				                </div>
+
+
+				                <div class="panel panel-default">
+					                <div class="panel-heading" role="tab" id="headingTwo">
+						                <h4 class="panel-title">
+							                <a class="filter-open" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+								                Виробник
+							                </a>
+						                </h4>
+					                </div>
+					                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+						                <div class="panel-body">
+
+
+						                </div>
+					                </div>
+				                </div>
+
+				                <div class="panel panel-default">
+					                <div class="panel-heading" role="tab" id="headingThree">
+						                <h4 class="panel-title">
+							                <a class="filter-open" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+								                Вид
+							                </a>
+						                </h4>
+					                </div>
+					                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						                <div class="panel-body">
+
+
+						                </div>
+					                </div>
+				                </div>
+
+				                <div class="panel panel-default">
+					                <div class="panel-heading" role="tab" id="headingFour">
+						                <h4 class="panel-title">
+							                <a class="filter-open" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+								                Розмір
+							                </a>
+						                </h4>
+					                </div>
+					                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+						                <div class="panel-body">
+							                <ul class="filter-open__list filter-open__size">
+								                <li><a href="#">s</a></li>
+								                <li><a href="#">m</a></li>
+								                <li><a href="#">l</a></li>
+								                <li><a href="#">xl</a></li>
+								                <li><a href="#">xxl</a></li>
+							                </ul>
+						                </div>
+					                </div>
+				                </div>
 			                </div>
 		                </nav>
 	                </aside>
@@ -194,7 +261,6 @@
 			                </div>
 		                </div>
 		                <div class="catalogue-content other">
-			                <h3 class="catalogue-content__title">Популярні товари</h3>
 			                <div class="other-goods">
 				                <ul class="other-goods__list card-box">
 					                <li>
