@@ -196,25 +196,31 @@
     bottom: 25px
     left: 50%
     margin-left: -83px
+.clothes
+  background: url(../img/shop-enter/clothes.jpg) no-repeat
+  height: 430px
+.accessories-hair
+  background: url(../img/shop-enter/accessories-hair.jpg) no-repeat
+  height: 430px
+.accessories
+  background: url(../img/shop-enter/accessories.jpg) no-repeat
+  margin-bottom: 22px
+.shoes
+  background: url(../img/shop-enter/shoes.jpg) no-repeat
+.hand-made
+  background: url(../img/shop-enter/hand-made.jpg) no-repeat
+.instruments
+  background: url(../img/shop-enter/instruments.jpg) no-repeat
+.cosmetics
+  background: url(../img/shop-enter/cosmetics.jpg) no-repeat
+  height: 203px
+.shop-enter-blocks__content
+  background-size: contain
+  height: 204px
 .main-blocks__content
   background-size: contain
   height: 205px
   width: 270px
-  &:hover .overlay
-    opacity: 1
-    background-color: rgba(153,0,0,0.6)
-  .overlay
-    position: absolute
-    top: 0
-    left: 0
-    height: 100%
-    width: 100%
-    overflow: hidden
-    @include transition(all 0.4s ease-in-out)
-    a
-      height: 100%
-      width: 100%
-      display: block
 .overlay-img
   opacity: 0
   position: absolute
@@ -224,7 +230,7 @@
   @include transition(all 0.4s ease-in-out)
 .overlay:hover .overlay-img
   opacity: 1
-.autobiography
+.link-box
   &:hover .overlay
     opacity: 1
     background-color: rgba(153,0,0,0.6)
@@ -240,7 +246,9 @@
       height: 100%
       width: 100%
       display: block
-
+.shop-enter__row
+  margin-bottom: 20px
+  +clearfix
 //Barber masters & tattoo masters
 .lightSlider
   li
