@@ -215,6 +215,15 @@
       height: 100%
       width: 100%
       display: block
+.overlay-img
+  opacity: 0
+  position: absolute
+  left: 50%
+  top: 50%
+  margin: -55px 0 0 -55px
+  @include transition(all 0.4s ease-in-out)
+.overlay:hover .overlay-img
+  opacity: 1
 .autobiography
   &:hover .overlay
     opacity: 1
@@ -284,6 +293,7 @@
 
 //Footer
 .footer
+  padding-top: 30px
   font-family: RobotoRegular
   font-size: 24px
   color: $color-base
@@ -313,7 +323,7 @@
     background-position: 0 -55px
     height: 39px
     width: 36px
-    margin-right: 10px
+    margin: 0 10px -6px 0
   .contact-us li:nth-child(2)
     margin-left: 46px
   .contact-us li:nth-child(3):before
@@ -335,6 +345,8 @@
     margin-top: 15px
     a
       text-decoration: underline
+  .footer-question
+    display: block
 
 
 

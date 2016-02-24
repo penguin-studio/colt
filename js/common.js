@@ -1,11 +1,11 @@
 (function(){
     var mpSliderBtn = $('.go-to-down');
-    mpSliderBtn.click( function(e){
+    mpSliderBtn.on('click', function(e){
         e.preventDefault();
         var scroll_el = $(this);
-        if ($(scroll_el).length != 0) {
-            $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
-        }
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
         return false;
     });
 
