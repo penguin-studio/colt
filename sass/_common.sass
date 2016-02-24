@@ -144,7 +144,6 @@
     padding: 0
     .main-blocks-right__row
       margin-top: 20px
-
 .link-box
   position: relative
   .link-box__title
@@ -249,6 +248,7 @@
 .shop-enter__row
   margin-bottom: 20px
   +clearfix
+
 //Barber masters & tattoo masters
 .lightSlider
   li
@@ -299,6 +299,60 @@
 .map-wrapp
   text-align: center
 
+//Catalogue
+.cart-label
+  border: 2px solid #0f4d7c
+  font-family: RobotoCondensedBold
+  font-size: 18px
+  text-transform: $text-transform
+  color: $color-base
+  padding: 15px
+  p
+    margin: 0
+    span
+      font-family: RobotoCondensedRegular
+  .cart-label__wrapp
+    &:before
+      content: ''
+      display: block
+      float: left
+      background: url(../img/icons-s393558560b.png) no-repeat
+      background-position: 0 0
+      width: 69px
+      height: 60px
+      margin: -6px 15px 0 0
+.categories
+  padding: 0 10px
+  .categories-title
+    font-size: 24px
+    color: $color-base
+    text-transform: $text-transform
+    font-family: RobotoCondensedBold
+    &:after
+      content: ''
+      display: block
+      height: 2px
+      width: 30px
+      background-color: #990000
+      margin-top: 10px
+  .categories-nav
+    &:after
+      content: ''
+      display: block
+      height: 2px
+      width: 140px
+      background-color: $color-base
+    li
+      margin-top: 10px
+      a
+        font-family: RobotoCondensedRegular
+        font-size: 18px
+        color: $color-base
+        text-transform: $text-transform
+    li:last-child
+      margin-bottom: 15px
+
+
 //Footer
 .footer
   padding-top: 30px
@@ -309,8 +363,8 @@
     &:before
       content: ''
       display: inline-block
-      background: url(../img/icons-se1a19f35ec.png) no-repeat
-      background-position: 0 -21px
+      background: url(../img/icons-s393558560b.png) no-repeat
+      background-position: 0 -81px
       height: 34px
       width: 27px
       margin-right: 10px
@@ -327,8 +381,8 @@
   .contact-us li:first-child:before
     content: ''
     display: inline-block
-    background: url(../img/icons-se1a19f35ec.png) no-repeat
-    background-position: 0 -55px
+    background: url(../img/icons-s393558560b.png) no-repeat
+    background-position: 0 -115px
     height: 39px
     width: 36px
     margin: 0 10px -6px 0
@@ -337,8 +391,8 @@
   .contact-us li:nth-child(3):before
     content: ''
     display: inline-block
-    background: url(../img/icons-se1a19f35ec.png) no-repeat
-    background-position: 0 0
+    background: url(../img/icons-s393558560b.png) no-repeat
+    background-position: 0 -60px
     height: 21px
     width: 36px
     margin: 0 10px -2px 0
