@@ -250,7 +250,7 @@
   +clearfix
 
 //Barber masters & tattoo masters
-.lightSlider
+.card-box
   li
     position: relative
     &:hover .bottom-menu
@@ -287,6 +287,16 @@
         font-family: RobotoCondensedRegular
         font-size: 14px
         text-decoration: underline
+      .bottom-menu__btn-buy
+        color: $bg-base
+        font-family: RobotoCondensedBold
+        font-size: 24px
+        display: block
+        padding: 5px 15px
+        background-color: #630000
+        margin-top: -11px
+
+
 
 //Table price
 .table-responsive
@@ -351,6 +361,21 @@
         text-transform: $text-transform
     li:last-child
       margin-bottom: 15px
+.catalogue-content
+  .catalogue-content__title
+    font-size: 20px
+    font-family: RobotoCondensedBold
+    color: $color-base
+    text-transform: $text-transform
+    text-align: center
+.other-goods__list
+  +clearfix
+  li
+    float: left
+    margin-right: 14px
+    overflow: hidden
+  li:last-child
+    margin-right: 0
 
 
 //Footer

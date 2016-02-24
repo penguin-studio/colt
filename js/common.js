@@ -1,5 +1,9 @@
 (function(){
-    var mpSliderBtn = $('.go-to-down');
+    var mpSliderBtn = $('.go-to-down'),
+        lightSlider = $(".lightSlider"),
+        noveltySlider = $('#noveltySlider'),
+        viwedSlider = $('#viwedSlider');
+
     mpSliderBtn.on('click', function(e){
         e.preventDefault();
         var scroll_el = $(this);
@@ -9,8 +13,18 @@
         return false;
     });
 
-    $(".lightSlider").lightSlider({
+    lightSlider.lightSlider({
         item: 4,
         pager: false
+    });
+
+    noveltySlider.lightSlider({
+        item: 3,
+        controls: false
+    });
+
+    viwedSlider.lightSlider({
+        item: 3,
+        controls: false
     });
 })();
