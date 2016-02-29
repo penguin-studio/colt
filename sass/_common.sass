@@ -296,6 +296,41 @@
         background-color: #630000
         margin-top: -11px
 
+//Page barbers
+.personal-pages
+  margin-bottom: 15px
+.row
+  .enter-personal-page
+    text-align: center
+    background: url(../img/page-barber-masters/right-block-bg.jpg) no-repeat
+    padding: 0
+    height: 425px
+    +transition(all 0.4s ease-in-out)
+    &:hover
+      background: url(../img/page-barber-masters/right-block-bg__hover.jpg) no-repeat
+    &:hover .enter-personal-page__link
+      display: block
+  .enter-personal-page__title
+    font-size: 18px
+    color: #dfdfe2
+    text-transform: $text-transform
+    font-family: RobotoCondensedBold
+    text-align: center
+  .enter-personal-page__logo
+    display: block
+    margin: 60px auto
+    background: url(../img/page-barber-masters/logo-gray.png) no-repeat
+    height: 170px
+    width: 170px
+    background-size: contain
+  .enter-personal-page__link
+    color: #dfdfe2
+    font-family: RobotoRegular
+    font-size: 16px
+    display: none
+    text-decoration: underline
+
+
 
 
 //Table price
