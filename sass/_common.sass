@@ -387,6 +387,7 @@
       font-family: RobotoCondensedBold
       font-size: 24px
       text-shadow: 1px 1px 2px rgba(0,0,0,0.75)
+      margin-top: 0
     p
       text-align: left
       font-size: 16px
@@ -429,6 +430,19 @@
         &:hover
           color: rgb(153,0,0)
 
+//Mass media
+.mass-media-container
+  .mass-media-container__text
+    right: 23px
+    @include transition(all 0.4s ease-in-out)
+    &:hover
+      background-color: rgba(153,0,0,0.6)
+.mass-media__label
+  font-size: 18px
+  text-transform: $text-transform
+  margin-bottom: 10px
+  display: block
+  +clearfix
 
 
 
