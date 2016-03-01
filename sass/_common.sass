@@ -1,3 +1,9 @@
+//Text
+.main-text
+  clear: both
+  font-size: 18px
+  font-family: RobotoRegular
+
 //Separator line
 .separator-line
   background: url(../img/separator-line.png) no-repeat center
@@ -250,9 +256,46 @@
       height: 100%
       width: 100%
       display: block
-.shop-enter__row
+.row-margin
   margin-bottom: 20px
   +clearfix
+
+//Services
+.haircut
+  background: url(../img/services/1.jpg) no-repeat
+  height: 430px
+.greyness
+  background: url(../img/services/2.jpg) no-repeat
+  height: 204px
+.royal-shave
+  background: url(../img/services/3.jpg) no-repeat
+  height: 204px
+.laying
+  background: url(../img/services/4.jpg) no-repeat
+  height: 430px
+.man-haircut
+  background: url(../img/services/5.jpg) no-repeat
+  height: 204px
+.father-son
+  background: url(../img/services/6.jpg) no-repeat
+  height: 430px
+.beard-grooming
+  background: url(../img/services/7.jpg) no-repeat
+  height: 204px
+.make-tattoo
+  background: url(../img/services/8.jpg) no-repeat
+  height: 430px
+.child-haircut
+  background: url(../img/services/9.jpg) no-repeat
+  height: 204px
+.mowing-machine
+  background: url(../img/services/10.jpg) no-repeat
+  height: 204px
+
+//Service post
+.service-slider
+  margin: 20px 0
+
 
 //Barber masters & tattoo masters
 .card-box
@@ -444,12 +487,6 @@
   display: block
   +clearfix
 
-
-
-
-
-
-
 //Table price
 .table-responsive
   font-size: 20px
@@ -556,6 +593,76 @@
   .filter-open__price
     li a
       text-transform: none
+
+//Franchise
+.video
+  background-color: #ccc
+  height: 430px
+//Form
+.request
+  height: 220px
+  +box-sizing(border-box)
+  h3
+    text-transform: $text-transform
+    text-align: center
+    font-family: RobotoCondensedBold
+  input[type="text"]
+    background: none
+    outline: none
+    border-bottom: 2px solid $bg-base
+    padding: 5px 10px
+    width: 100%
+    margin-bottom: 10px
+  .wrapp-check-online
+    margin-top: 15px
+    .btn-submit
+      background-color: #a72d2d
+      color: $bg-base
+      padding: 5px 30px
+//School
+.school-prices
+  font-family: RobotoRegular
+  margin-bottom: 20px
+  h4
+    font-size: 20px
+    text-transform: $text-transform
+  .school-price
+    display: block
+    margin-left: 15px
+
+
+input[type="text"]::-webkit-input-placeholder
+  color: $base-placeholder-text
+input[type="text"]::-moz-placeholder
+  color: $base-placeholder-text
+input[type="text"]:-moz-placeholder
+  color: $base-placeholder-text
+input[type="text"]:-ms-input-placeholder
+  color: $base-placeholder-text
+input[type="text"]::-webkit-input-placeholder
+  opacity: 1
+  transition: opacity 0.3s ease
+input[type="text"]::-moz-placeholder
+  opacity: 1
+  transition: opacity 0.3s ease
+input[type="text"]:-moz-placeholder
+  opacity: 1
+  transition: opacity 0.3s ease
+input[type="text"]:-ms-input-placeholder
+  opacity: 1
+  transition: opacity 0.3s ease
+input[type="text"]:focus::-webkit-input-placeholder
+  opacity: 0
+  transition: opacity 0.3s ease
+input[type="text"]:focus::-moz-placeholder
+  opacity: 0
+  transition: opacity 0.3s ease
+input[type="text"]:focus:-moz-placeholder
+  opacity: 0
+  transition: opacity 0.3s ease
+input[type="text"]:focus:-ms-input-placeholder
+  opacity: 0
+  transition: opacity 0.3s ease
 
 
 //Footer

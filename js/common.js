@@ -3,7 +3,8 @@
         lightSlider = $(".lightSlider"),
         noveltySlider = $('#noveltySlider'),
         viwedSlider = $('#viwedSlider'),
-        masterWorksSlider = $('.master-works');
+        masterWorksSlider = $('.master-works'),
+        serviceSlider = $('.service-slider__content');
 
     mpSliderBtn.on('click', function(e){
         e.preventDefault();
@@ -33,6 +34,10 @@
         item: 5,
         pager: false,
         slideMargin: 0
-    })
+    });
 
+    serviceSlider.lightSlider({
+        item: 1,
+        controls: false
+    })
 })();
