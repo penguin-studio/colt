@@ -11,35 +11,70 @@
   width: 100%
   margin: 30px 0
 
+//Responsive header-nav
+.hidden-menu
+  display: block
+  position: fixed
+  list-style: none
+  padding: 10px
+  margin: 0
+  box-sizing: border-box
+  width: 100%
+  background-color: #eee
+  height: 100px
+  top: -100px
+  left: 0
+  transition: top .2s
+  z-index: 2
+  -webkit-transform: translateZ(0)
+  -webkit-backface-visibility: hidden
+.hidden-menu-ticker
+  display: none
+.btn-menu
+  color: #fff
+  background-color: #666
+  padding: 5px
+  position: fixed
+  top: 5px
+  right: 5px
+  cursor: pointer
+  transition: left .23s
+  z-index: 3
+  width: 25px
+
+.btn-menu span
+  display: block
+  height: 5px
+  background-color: #fff
+  margin: 5px 0 0
+  transition: all .1s linear .23s
+  position: relative
+
+.btn-menu span.first
+  margin-top: 0
+
+.hidden-menu-ticker:checked ~ .hidden-menu
+  top: 0
+
+.hidden-menu-ticker:checked ~ .btn-menu span.first
+  +transform(rotate(45deg))
+  top: 10px
+
+.hidden-menu-ticker:checked ~ .btn-menu span.second
+  opacity: 0
+
+.hidden-menu-ticker:checked ~ .btn-menu span.third
+  +transform(rotate(-45deg))
+  top: -10px
+
+
+
 //Header
 .header
   height: 130px
   background-color: $bg-block
   position: relative
-  .header-nav-bar-left
-    width: 40%
-    float: left
-  .header-nav
-    font-family: PTSansNarrow
-    font-size: 14px
-    margin-top: 85px
-    +clearfix
-    li
-      float: left
-      margin: 0 0 0 9px
-      display: block
-      a
-        text-transform: $text-transform
-        color: $color-base
-        padding: 3px 0
-        border-bottom: 1px solid $color-base
-        display: block
-        &:hover
-          text-decoration: none
-      .active
-        border-top: 2px solid #990000
-        color: #990000
-        margin-top: -2px
+  z-index: 1
   .header-logo
     position: absolute
     left: 50%
@@ -67,6 +102,30 @@
       margin-top: 20px
   .header-nav__left-list
     float: right
+.header-nav-bar-left
+  width: 40%
+  float: left
+.header-nav
+  font-family: PTSansNarrow
+  font-size: 14px
+  margin-top: 85px
+  +clearfix
+  li
+    float: left
+    margin: 0 0 0 9px
+    display: block
+    a
+      text-transform: $text-transform
+      color: $color-base
+      padding: 3px 0
+      border-bottom: 1px solid $color-base
+      display: block
+      &:hover
+        text-decoration: none
+    .active
+      border-top: 2px solid #990000
+      color: #990000
+      margin-top: -2px
 .nav__social
   float: right
   margin-top: 15px
@@ -92,7 +151,7 @@
     .fa-facebook
       margin: -9px 0 0 -6px
     .fa-instagram
-      margin: -9px 0 0 -9px
+      margin: -9px 0 0 -8px
     .fa-twitter
       margin: -8px 0 0 -10px
 
@@ -180,7 +239,10 @@
 .history
   background: url(../img/main-links/history.png) no-repeat
   .history__title
-    padding-top: 15px
+    position: absolute
+    bottom: 25px
+    left: 50%
+    margin-left: -61px
     font-size: 18px
 .ideas
   background: url(../img/main-links/ideas.png) no-repeat
@@ -308,6 +370,7 @@
     .card-box__wrapp
       position: relative
       width: 280px
+      margin: 0 auto
     .bottom-menu
       position: absolute
       display: block
@@ -723,6 +786,35 @@ input[type="text"]:focus:-ms-input-placeholder
       text-decoration: underline
   .footer-question
     display: block
+
+@media screen and (min-width : 320px) and (max-width : 780px)
+  body
+    overflow-x: hidden
+  .header
+    height: auto
+  .header-nav
+    margin: 0
+  .autobiography
+    width: auto
+    background-size: cover
+  .main-blocks__content
+    width: auto
+    background-size: cover
+    margin-top: 20px
+  .card-box li
+    .card-box__wrapp
+      margin: 0 auto
+  .map-wrapp img
+    width: 100%
+  .footer
+    text-align: center
+    .faq
+      padding: 50px 0 0 0
+    .nav__social
+      position: absolute
+      left: 50%
+      margin-left: -77px
+
 
 
 

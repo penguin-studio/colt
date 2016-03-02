@@ -13,7 +13,7 @@
 <body>
 <header class="header">
     <div class="container">
-        <div class="header-nav-bar-left">
+        <div class="header-nav-bar-left hidden-xs">
             <nav class="nav__social">
                 <ul class="nav__social-list">
                     <li><a class="fa fa-vk" href="#"></a></li>
@@ -32,10 +32,10 @@
 		        </ul>
 	        </nav>
         </div>
-	    <div class="header-logo">
+	    <div class="header-logo hidden-xs">
 		    <a href="index.html"><img src="img/logo.png" height="222" width="222" alt="logo" title="logo"></a>
 	    </div>
-	    <div class="header-nav-bar-right">
+	    <div class="header-nav-bar-right hidden-xs">
 		    <p class="schedule">Графік роботи: 10:00 — 21:00 без вихідних</p>
 		    <a class="header-check" href="#">Запис онлайн</a>
 		    <nav class="header-nav__right">
@@ -50,6 +50,27 @@
         </div>
     </div>
 </header>
+<!--responsive menu-->
+<nav class="header-nav hidden-md hidden-lg visible-xs">
+	<input type="checkbox" id="hmt" class="hidden-menu-ticker">
+	<label class="btn-menu" for="hmt">
+		<span class="first"></span>
+		<span class="second"></span>
+		<span class="third"></span>
+	</label>
+	<ul class="hidden-menu">
+		<li><a class="active" href="index.html">Про нас</a></li>
+		<li><a href="barber-masters.html">Барбер майстри</a></li>
+		<li><a href="tattoo-masters.html">Тату майстри</a></li>
+		<li><a href="services.html">Послуги</a></li>
+		<li><a href="#">Контакти</a></li>
+		<li><a href="school.html">Школа барберів і тату</a></li>
+		<li><a href="blog.html">Блог</a></li>
+		<li><a href="shop-enter.html">Магазин</a></li>
+		<li><a href="franchise.html">Франшиза</a></li>
+		<li><a href="mass-media.html">Змі про нас</a></li>
+	</ul>
+</nav>
 <section class="slider">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Wrapper for slides -->
