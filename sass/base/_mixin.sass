@@ -160,6 +160,110 @@
     -webkit-flex-direction: row
     flex-direction: row
 
+@mixin input-textarea-css3-tricks
+  textarea::-webkit-input-placeholder
+    color: $base-placeholder-text
+  textarea::-moz-placeholder
+    color: $base-placeholder-text
+  textarea::-webkit-input-placeholder
+    color: $base-placeholder-text
+  textarea:-moz-placeholder
+    color: $base-placeholder-text
+  textarea:-ms-input-placeholder
+    color: $base-placeholder-text
+
+  input[type="text"]::-webkit-input-placeholder
+    color: $base-placeholder-text
+  input[type="text"]::-moz-placeholder
+    color: $base-placeholder-text
+  input[type="text"]:-moz-placeholder
+    color: $base-placeholder-text
+  input[type="text"]:-ms-input-placeholder
+    color: $base-placeholder-text
+
+  input[type="email"]::-webkit-input-placeholder
+    color: $base-placeholder-text
+  input[type="email"]::-moz-placeholder
+    color: $base-placeholder-text
+  input[type="email"]:-moz-placeholder
+    color: $base-placeholder-text
+  input[type="email"]:-ms-input-placeholder
+    color: $base-placeholder-text
+
+  textarea::-webkit-input-placeholder
+    opacity: 1
+    transition: opacity 0.3s ease
+  textarea::-moz-placeholder
+    opacity: 1
+    transition: opacity 0.3s ease
+  textarea:-moz-placeholder
+    opacity: 1
+    transition: opacity 0.3s ease
+  textarea:-ms-input-placeholder
+    opacity: 1
+    transition: opacity 0.3s ease
+  textarea:focus::-webkit-input-placeholder
+    opacity: 0
+    transition: opacity 0.3s ease
+  textarea:focus::-moz-placeholder
+    opacity: 0
+    transition: opacity 0.3s ease
+  textarea:focus:-moz-placeholder
+    opacity: 0
+    transition: opacity 0.3s ease
+  textarea:focus:-ms-input-placeholder
+    opacity: 0
+    transition: opacity 0.3s ease
+
+  input[type="text"]::-webkit-input-placeholder
+    opacity: 1
+    transition: opacity 0.3s ease
+  input[type="text"]::-moz-placeholder
+    opacity: 1
+    transition: opacity 0.3s ease
+  input[type="text"]:-moz-placeholder
+    opacity: 1
+    transition: opacity 0.3s ease
+  input[type="text"]:-ms-input-placeholder
+    opacity: 1
+    transition: opacity 0.3s ease
+  input[type="text"]:focus::-webkit-input-placeholder
+    opacity: 0
+    transition: opacity 0.3s ease
+  input[type="text"]:focus::-moz-placeholder
+    opacity: 0
+    transition: opacity 0.3s ease
+  input[type="text"]:focus:-moz-placeholder
+    opacity: 0
+    transition: opacity 0.3s ease
+  input[type="text"]:focus:-ms-input-placeholder
+    opacity: 0
+    transition: opacity 0.3s ease
+
+  input[type="email"]::-webkit-input-placeholder
+    opacity: 1
+    transition: opacity 0.3s ease
+  input[type="email"]::-moz-placeholder
+    opacity: 1
+    transition: opacity 0.3s ease
+  input[type="email"]:-moz-placeholder
+    opacity: 1
+    transition: opacity 0.3s ease
+  input[type="email"]:-ms-input-placeholder
+    opacity: 1
+    transition: opacity 0.3s ease
+  input[type="email"]:focus::-webkit-input-placeholder
+    opacity: 0
+    transition: opacity 0.3s ease
+  input[type="email"]:focus::-moz-placeholder
+    opacity: 0
+    transition: opacity 0.3s ease
+  input[type="email"]:focus:-moz-placeholder
+    opacity: 0
+    transition: opacity 0.3s ease
+  input[type="email"]:focus:-ms-input-placeholder
+    opacity: 0
+    transition: opacity 0.3s ease
 
 //Sprite
 @import "compass/utilities/sprites"

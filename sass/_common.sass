@@ -1,8 +1,40 @@
+@include input-textarea-css3-tricks
+
+[class^="icon-"]:before, [class*=" icon-"]:before
+  font-family: "fontello"
+  font-style: normal
+  font-weight: normal
+  speak: none
+  font-size: 38px
+  display: inline-block
+  text-decoration: inherit
+  width: 1em
+  margin-right: .2em
+  text-align: center
+  font-variant: normal
+  text-transform: none
+  line-height: 1em
+  margin-left: .2em
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+.widget-back.wi-middle
+  margin-top: 100px 
+
+.icon-periscope-2:before
+  margin: -19px
+  content: '\e800' /* '' */
+
 //Text
 .main-text
   clear: both
   font-size: 18px
   font-family: RobotoRegular
+
+//Breadcrumb
+.breadcrumb
+  font-family: RobotoRegular
+  font-size: 16px
 
 //Separator line
 .separator-line
@@ -16,13 +48,13 @@
   display: block
   position: fixed
   list-style: none
-  padding: 10px
+  padding: 10px 10px 20px 10px
   margin: 0
   box-sizing: border-box
   width: 100%
   background-color: #eee
-  height: 100px
-  top: -100px
+  height: 120px
+  top: -120px
   left: 0
   transition: top .2s
   z-index: 2
@@ -40,7 +72,7 @@
   cursor: pointer
   transition: left .23s
   z-index: 3
-  width: 25px
+  width: 32px
 
 .btn-menu span
   display: block
@@ -72,19 +104,42 @@
 //Header
 .header
   width: 100%
-  height: 130px
-  background-color: #dfdfe2
+  height: 110px
   position: fixed
-  z-index: 1000
-  box-shadow: 1px 1px 7px 3px rgba(0,0,0,0.5)
+  background-color: #dfdfe2
+  z-index: 100000
+  +box-shadow(1px 1px 7px 3px rgba(0,0,0,0.5))
+  +transition(height 0.3s)
+  .language-swip
+    +clearfix
+    li
+      float: left
+      margin-right: 5px 
+  .header-nav__left
+    margin-top: -20px
+    clear: both
+  .header-nav__right
+    margin-top: -20px 
   .header-logo
     position: absolute
     left: 50%
-    margin-left: -111px
+    margin-left: -89px
     z-index: 100
+    img
+      height: 80%
+      width: 80%
   .header-nav-bar-right
+    position: relative
     width: 40%
     float: right
+    .check-by-phone
+      position: absolute
+      top: 50px
+      color: #999
+      font-size: 14px
+      margin: -10px 0
+      font-family: RobotoRegular
+      font-weight: 900
     .header-nav
       margin-top: 85px
     .header-nav__right-list li:first-child
@@ -93,8 +148,10 @@
       color: #999
       font-size: 14px
       font-family: RobotoRegular
-      margin-top: 20px
+      margin-top: 15px
+      margin-bottom: 0 
       float: left
+      font-weight: 900
     .header-check
       color: #990000
       text-decoration: underline
@@ -107,6 +164,84 @@
 .header-nav-bar-left
   width: 40%
   float: left
+  .search__form
+    float: left
+    width: 45%
+    margin-top: 15px
+  .search
+    width: 100%
+    position: relative
+    .search input
+      border: none
+    .search .input
+      width: 100%
+      padding: 8px 37px 9px 15px
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+      +box-shadow(inset 0 0 5px rgba(0,0,0,0.1))
+      +border-radius(20px)
+      background: #EEE
+      font: 13px Tahoma, Arial, sans-serif
+      color: #555
+      outline: none
+    .search .input:focus
+      +box-shadow(inset 0 0 5px rgba(0,0,0,0.2))
+      background: #E8E8E8
+      color: #333
+    .search .submit
+      position: absolute
+      top: 0
+      right: 0
+      width: 37px
+      height: 100%
+      cursor: pointer
+      background: url(https://lh4.googleusercontent.com/-b-5aBxcxarY/UAfFW9lVyjI/AAAAAAAABUg/gQtEXuPuIds/s13/go.png) 50% no-repeat
+      +opacity(0.5)
+    .search .submit:hover
+      +opacity(0.8)
+    input[type="search"]
+      -webkit-appearance: none
+
+header.sticky
+  position: fixed
+  line-height: 70px
+  height: 70px
+  width: 100%
+  background: #dfdfe2
+  text-align: left
+  .header-logo
+    margin-left: -56px
+    img
+      height: 50%
+      width: 50%
+      +transition(all 0.3s)
+  .header-nav-bar-left
+    .search__form
+      display: none
+    .nav__social
+      display: none
+  .language-swip
+    display: none
+  .header-nav-bar-right
+    .header-nav
+      margin: 0
+    .schedule
+      display: none
+    .check-by-phone
+      display: none
+    .header-check
+      display: none
+  .header-nav
+    margin: 0
+    p
+      margin: 0
+    li a
+      padding: 0
+      border: none
+      +transition(all 0.3s)
+      &:after
+        display: none
+
 .header-nav
   font-family: PTSansNarrow
   font-size: 14px
@@ -120,10 +255,18 @@
       text-transform: $text-transform
       color: $color-base
       padding: 3px 0
-      border-bottom: 1px solid $color-base
       display: block
+      text-align: center
       &:hover
+        color: rgb(15,77,124)
         text-decoration: none
+      &:after
+        content: ''
+        display: block
+        background: url(../img/svg/mussache.svg) no-repeat
+        height: 20px
+        width: 45px
+        margin: 0 auto
     .active
       border-top: 2px solid #990000
       color: #990000
@@ -140,22 +283,35 @@
     width: 30px
     position: relative
     margin: 0 4px
+    &:hover
+      background-color: #990000
     a
       position: absolute
-      left: 50%
-      top: 50%
+      width: 100%
+      height: 100%
       text-decoration: none
       color: $bg-block
       display: block
       font-size: 19px
-    .fa-vk
+      &:hover
+        color: $color-base
+      &:before
+        position: absolute
+        top: 50%
+        left: 50%
+    .fa-vk:before
       margin: -10px 0 0 -10px
-    .fa-facebook
+    .fa-facebook:before
       margin: -9px 0 0 -6px
-    .fa-instagram
+    .fa-instagram:before
       margin: -9px 0 0 -8px
-    .fa-twitter
+    .fa-twitter:before
       margin: -8px 0 0 -10px
+    .fa-youtube:before
+      margin: -10px 0 0 -8px
+    .fa-pinterest:before
+      margin: -9px 0 0 -8px
+
 
 //Slider
 .slider
@@ -183,9 +339,10 @@
   background: url(../img/main-bg.jpg) repeat
   padding: 180px 0 55px 0
 .main-blocks
-  padding: 0 25px 40px 25px
+  padding: 0 25px 20px 25px
   background-color: $bg-block
   .wrapp-check-online
+    clear: both
     text-align: center
     margin-top: 40px
     .check-online
@@ -197,6 +354,8 @@
       color: #990000
       text-decoration: none
       text-transform: $text-transform
+  .col-md-6
+    +clearfix
   .main-blocks__title
     font-size: 35px
     color: $color-base
@@ -204,7 +363,8 @@
     font-family: RobotoCondensedBold
     text-align: center
     padding: 30px 0 50px 0
-    margin: 0
+    max-width: 280px
+    margin: 0 auto
   .main-blocks__title-personal
     padding: 30px 0 0 0
   .main-blocks__title-desc
@@ -228,7 +388,7 @@
     margin: 0 auto
     text-transform: $text-transform
 .autobiography
-  background: url(../img/main-links/autobiography.png) no-repeat
+  background: url(../img/main-links/autobiography.png) no-repeat center
   background-size: contain
   height: 430px
   width: 570px
@@ -324,36 +484,78 @@
   margin-bottom: 20px
   +clearfix
 
+//About us
+.about-us
+  .main-blocks__title
+    position: relative
+    &::after
+      content: ''
+      display: block
+      background: url(../img/svg/shave-open.svg) no-repeat
+      background-size: contain
+      height: 30px
+      width: 100px
+      margin: 0 auto
+
 //Services
+.services-wrapp
+  +clearfix
+  .main-blocks
+    background: url(../img/services-main.jpg) no-repeat 100% 100%
+    background-size: cover
+    a
+      color: $bg-block
+    .main-blocks__title
+      color: $bg-block
+  .col-md-12
+    margin-bottom: 20px 
+  .table-responsive
+    color: $bg-block
+    font-size: 20px
+    td:first-child
+      padding: 0 0 0 60px
+      +transition(.3s linear)
+    td:first-child:before
+      content: ''
+      display: block
+      float: left
+      background: url(../img/services-item.png) no-repeat
+      height: 20px
+      width: 44px
+      margin: 5px 0 0 -65px
+      +transition( 0.8s linear)
+    td:first-child:hover:before
+      +transform(rotate(180deg) translate(350px, 0))
+      
 .haircut
-  background: url(../img/services/1.jpg) no-repeat
+  background: url(../img/services/1.jpg) no-repeat center
   height: 430px
 .greyness
-  background: url(../img/services/2.jpg) no-repeat
+  background: url(../img/services/2.jpg) no-repeat center
   height: 204px
 .royal-shave
-  background: url(../img/services/3.jpg) no-repeat
+  background: url(../img/services/3.jpg) no-repeat center
   height: 204px
 .laying
-  background: url(../img/services/4.jpg) no-repeat
+  background: url(../img/services/4.jpg) no-repeat center
   height: 430px
 .man-haircut
-  background: url(../img/services/5.jpg) no-repeat
+  background: url(../img/services/5.jpg) no-repeat center
   height: 204px
 .father-son
-  background: url(../img/services/6.jpg) no-repeat
+  background: url(../img/services/6.jpg) no-repeat center
   height: 430px
 .beard-grooming
-  background: url(../img/services/7.jpg) no-repeat
+  background: url(../img/services/7.jpg) no-repeat center
   height: 204px
 .make-tattoo
-  background: url(../img/services/8.jpg) no-repeat
+  background: url(../img/services/8.jpg) no-repeat center
   height: 430px
 .child-haircut
-  background: url(../img/services/9.jpg) no-repeat
+  background: url(../img/services/9.jpg) no-repeat center
   height: 204px
 .mowing-machine
-  background: url(../img/services/10.jpg) no-repeat
+  background: url(../img/services/10.jpg) no-repeat center
   height: 204px
 
 //Service post
@@ -365,10 +567,12 @@
 .card-box
   li
     &:hover .bottom-menu
-      height: 122px
+      height: 142px
       background-color: rgba(153,0,0,0.5)
       .bottom-menu__name:after
         display: none
+      .bottom-menu__btn-buy
+        bottom: 0            
     .card-box__wrapp
       position: relative
       width: 280px
@@ -377,7 +581,7 @@
       position: absolute
       display: block
       width: 280px
-      height: 80px
+      height: 100px
       bottom: 0
       background-color: rgba(15,77,124,0.5)
       text-align: center
@@ -403,6 +607,8 @@
         font-size: 14px
         text-decoration: underline
       .bottom-menu__btn-buy
+        position: absolute
+        bottom: -44px
         color: $bg-base
         font-family: RobotoCondensedBold
         font-size: 24px
@@ -410,6 +616,9 @@
         padding: 5px 15px
         background-color: #630000
         margin-top: -11px
+        @include transition(all 0.4s ease-in-out)
+        width: 100%
+
 
 //Page barbers & tattoo
 .personal-pages
@@ -417,12 +626,15 @@
 .row
   .enter-personal-page
     text-align: center
-    background: url(../img/page-barber-masters/right-block-bg.jpg) no-repeat
+    background-color: #0f4d7c
     padding: 0
     height: 425px
+    width: 49%
+    margin-left: 3px
     +transition(all 0.4s ease-in-out)
     &:hover
-      background: url(../img/page-barber-masters/right-block-bg__hover.jpg) no-repeat
+      background: rgba(153,0,0,0.8)
+      text-decoration: none
     &:hover .enter-personal-page__link
       display: block
   .enter-personal-page__title
@@ -464,11 +676,12 @@
     border: none
     margin-right: 25px
     font-size: 21px
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.8)
 .row-description
   padding: 0 40px
   margin-top: 15px
 .personal-description
-  background: url(../img/personal-page-barber/personal-description.jpg) repeat center
+  background: rgba(15,77,124,0.8)
   padding: 15px
   .personal-description__text
     font-family: RobotoRegular
@@ -512,6 +725,7 @@
       right: 20px
       &:hover
         color: $bg-base
+
 
 //Post
 .post-container
@@ -625,11 +839,16 @@
     text-transform: $text-transform
     text-align: center
 .other-goods__list
+  position: relative
+  overflow: hidden
   +clearfix
   li
     float: left
     margin-right: 14px
     overflow: hidden
+  img
+    min-width: 280px
+    vertical-align: middle
   li:last-child
     margin-right: 0
 .panel
@@ -665,6 +884,30 @@
 .video
   background-color: #ccc
   height: 430px
+
+.main-blocks-video
+  width: 100%
+  position: relative
+  #play
+    +border-radius(50%)
+    position: absolute
+    left: 50%
+    top: 50%
+    height: 50px
+    width: 50px
+    margin: -25px 0 0 -25px
+    background-color: #ccc
+    &:before
+      content: ''
+      display: block
+      height: 0
+      width: 0
+      border-top: 10px solid transparent
+      border-left: 20px solid rgba(0,0,0,0.8)
+      border-bottom: 10px solid transparent
+      margin-left: 17px
+  video
+    width: 100%
 //Form
 .request
   height: 220px
@@ -681,6 +924,7 @@
     width: 100%
     margin-bottom: 10px
   .wrapp-check-online
+
     margin-top: 15px
     .btn-submit
       background-color: #a72d2d
@@ -698,48 +942,121 @@
     margin-left: 15px
 
 
-input[type="text"]::-webkit-input-placeholder
-  color: $base-placeholder-text
-input[type="text"]::-moz-placeholder
-  color: $base-placeholder-text
-input[type="text"]:-moz-placeholder
-  color: $base-placeholder-text
-input[type="text"]:-ms-input-placeholder
-  color: $base-placeholder-text
-input[type="text"]::-webkit-input-placeholder
-  opacity: 1
-  transition: opacity 0.3s ease
-input[type="text"]::-moz-placeholder
-  opacity: 1
-  transition: opacity 0.3s ease
-input[type="text"]:-moz-placeholder
-  opacity: 1
-  transition: opacity 0.3s ease
-input[type="text"]:-ms-input-placeholder
-  opacity: 1
-  transition: opacity 0.3s ease
-input[type="text"]:focus::-webkit-input-placeholder
-  opacity: 0
-  transition: opacity 0.3s ease
-input[type="text"]:focus::-moz-placeholder
-  opacity: 0
-  transition: opacity 0.3s ease
-input[type="text"]:focus:-moz-placeholder
-  opacity: 0
-  transition: opacity 0.3s ease
-input[type="text"]:focus:-ms-input-placeholder
-  opacity: 0
-  transition: opacity 0.3s ease
+//Catalogue-item
+.model-list
+  margin-top: 15px
+  li
+    float: left
+    margin-left: 10px
+    cursor: pointer
+    +box-sizing(border-box)
+  li.active
+    +box-shadow(0 0 0 3px rgba(15,77,124,0.9))
+  li:first-child
+    margin-left: 0
+.catalogue-item
+  +clearfix
+.good-item
+  float: left
+  width: 35%
+  +clearfix
+.catalogue-item__description
+  width: 65%
+  float: left
+  font-size: 15px
+  .table-bordered
+    border: 2px solid $color-base
+    td
+      border: 2px solid $color-base
+      padding: 4px
+.catalogue-item__colors
+  float: left
+  +clearfix
+  li
+    float: left
+    margin-left: 10px
+    cursor: pointer
+  li:first-child
+    margin-left: 0
+.catalogue-item__buy-block
+  float: right
+  text-align: center
+  .catalogue-item__buy-price
+    font-family: RobotoCondensedBold
+    font-size: 24px
+  .catalogue-item__buy-btn
+    display: block
+    width: 100%
+    background-color: #b5595a
+    border: 2px solid #990000
+    padding: 14px 50px
+    text-transform: $text-transform
+    color: $bg-block
+    margin: 15px 0
+    &:hover
+      text-decoration: none
+  .catalogue-item__buy-payment
+    color: #990000
+    text-transform: $text-transform
+    font-size: 14px
+    text-decoration: underline
+.comments-title
+  font-family: RobotoRegular
+  font-size: 20px
+  text-transform: $text-transform
+  text-align: center
+.catalogue-item__request
+  margin-top: 20px
+  position: relative
+  input[type="submit"]
+    position: absolute
+    bottom: 30px
+    right: 10px
+    background: none
+    text-transform: $text-transform
+    color: #990000
+    font-size: 12px
+    font-family: RobotoCondensedRegular
+    text-decoration: underline
+  input[type="text"]
+    width: 50%
+  textarea
+    width: 100%
+    height: 140px
+    background-color: #f4f4f4
+    padding: 10px
+    margin-top: 15px
+.form-review
+  margin-bottom: 20px
+  .form-review__title
+    font-family: RobotoCondensedRegular
+    font-size: 18px
+    border-top: 2px solid $color-base
+    width: 50%
+    padding-top: 8px
+    .form-review__date
+      border-left: 1px solid $color-base
+      padding-left: 5px
+      margin-left: 5px
+  .form-review__text
+    font-size: 16px
 
+.contacts-wrapper
+  text-align: justify
+  margin-top: 40px
+  font-size: 20px
+  span
+    font-weight: 900
 
 //Footer
 .footer
-  padding-top: 30px
+  padding-top: 15px
   font-family: RobotoRegular
   font-size: 24px
   color: $color-base
   .footer-address
-    &:before
+    text-align: center
+    //&:before
       content: ''
       display: inline-block
       background: url(../img/icons-s393558560b.png) no-repeat
@@ -748,6 +1065,8 @@ input[type="text"]:focus:-ms-input-placeholder
       width: 27px
       margin-right: 10px
   .footer-schedule
+    max-width: 350px
+    margin: $margin_center
     text-align: center
   a
     color: $color-base
@@ -757,6 +1076,15 @@ input[type="text"]:focus:-ms-input-placeholder
       color: $color-base
   .contact-us
     text-align: center
+    margin-top: 7px
+    li
+      line-height: 36px
+      &:before
+        float: left
+  .all-rights
+    font-size: 13px
+    margin: 0
+
   .contact-us li:first-child:before
     content: ''
     display: inline-block
@@ -764,20 +1092,23 @@ input[type="text"]:focus:-ms-input-placeholder
     background-position: 0 -115px
     height: 39px
     width: 36px
-    margin: 0 10px -6px 0
+    margin: 0 10px -12px 0
   .contact-us li:nth-child(2)
-    margin-left: 46px
-  .contact-us li:nth-child(3):before
-    content: ''
-    display: inline-block
-    background: url(../img/icons-s393558560b.png) no-repeat
-    background-position: 0 -60px
-    height: 21px
-    width: 36px
-    margin: 0 10px -2px 0
+    &:before
+      content: ''
+      display: inline-block
+      background: url(../img/icons-s393558560b.png) no-repeat
+      background-position: 0 -60px
+      height: 21px
+      width: 36px
+      margin: 8px 10px -2px 0
+  .contact-us li .fa-skype
+    font-size: 36px
+    margin-right: 16px
+    float: left
   .nav__social
     float: none
-    margin: 0 110px
+    margin: 0 53px
     li
       &:hover
         background-color: #990000
@@ -789,16 +1120,156 @@ input[type="text"]:focus:-ms-input-placeholder
   .footer-question
     display: block
 
-@media screen and (min-width : 320px) and (max-width : 780px)
+//Order
+.input-right
+  .order-input
+    display: block
+    padding: 5px 10px
+    margin: 20px 0
+    width: 100%
+    +box-sizing(border-box)
+
+.wrapper-dropdown
+  position: relative
+  width: 100%
+  padding: 5px 10px
+  margin: 20px 0
+  background: $bg-base
+  color: $base-placeholder-text
+  outline: none
+  cursor: pointer
+  &:after
+    content: ''
+    width: 0
+    height: 0
+    position: absolute
+    right: 16px
+    top: 50%
+    margin-top: -6px
+    border-width: 6px 0 6px 6px
+    border-style: solid
+    border-color: transparent $color-base
+    +transform(rotate(90deg))
+    
+
+.wrapper-dropdown-1 .dropdown 
+  position: absolute
+  top: 100%
+  left: 0
+  right: 0 
+  z-index: 20
+  background-color: $bg-base
+  font-weight: normal
+  opacity: 0
+  pointer-events: none
+  li a
+    display: block
+    text-decoration: none
+    color: #9e9e9e
+    padding: 10px 20px
+
+
+
+.wrapper-dropdown-1 .dropdown li:hover a
+  background: #6f94b0
+  color: $bg-base
+.wrapper-dropdown-1.active .dropdown
+  opacity: 1
+  pointer-events: auto
+
+.wrapper-dropdown-1.active:after
+  border-color: #9bc7de transparent
+  border-width: 6px 6px 0 6px
+  margin-top: -3px
+  +transform(rotate(180deg))
+
+.wrapper-dropdown-1.active 
+  background: $bg-base
+
+//Cart
+.table-cart__wrapp
+  padding: 10px
+.table-cart
+  border: 0
+  tr:first-child
+    border-bottom: 2px solid $bg-base
+  tr
+    td
+      padding: 10px 0
+      a
+       
+        text-decoration: underline
+    .btn-del-row
+      color: #990000
+      font-weight: 100
+      text-transform: $text-transform
+      font-size: 18px
+      background: none
+    input[type="number"]
+      padding: 10px
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button
+      display: block
+.cart-bottom
+  +clearfix
+  width: 100%
+  margin-top: 15px
+  padding: 0 50px 0 0
+  .cart-bottom__text
+    float: left
+  .total-price
+    float: right
+    border-top: 1px solid #990000
+    text-align: center
+    p
+      text-transform: $text-transform
+      font-weight: 800
+    span
+      display: block
+
+//Lang
+.language-swip
+  float: left
+  margin: 18px 0 0 20px
+
+//Modal
+.modal-content
+  background-color: $bg-block !important
+  .modal-header
+    border-bottom: 0
+    .close
+      color: #990000
+      font-size: 50px
+      margin-top: -20px
+      margin-right: -10px
+  textarea
+    background-color: $bg-base
+    padding: 10px
+    width: 100%
+    height: 117px
+  .request
+    .wrapp-check-online
+      text-align: center
+.modal
+  .modal-dialog
+    margin: 190px auto
+
+@media screen and (max-width : 780px)
   body
     overflow-x: hidden
   .header
     height: auto
+    +box-shadow(none)
   .header-nav
     margin: 0
   .autobiography
     width: auto
     background-size: cover
+    .autobiography__title
+      max-width: 250px
+      margin-left: -125px
+  .main-blocks
+    margin-bottom: 15px
   .main-blocks__content
     width: auto
     background-size: cover
@@ -810,12 +1281,62 @@ input[type="text"]:focus:-ms-input-placeholder
     width: 100%
   .footer
     text-align: center
+    font-size: 15px
     .faq
       padding: 50px 0 0 0
     .nav__social
       position: absolute
       left: 50%
-      margin-left: -77px
+      margin: 0 0 0 -77px
+    .contact-us li
+      .fa-skype
+        float: left
+        margin-right: 0
+    .contact-us li:first-child:before
+      margin: 0
+    .contact-us li:nth-child(2)
+      margin: 0
+  .footer-address:before
+    float: left
+  .contact-us li:before
+    float: left
+  .personal-pages
+    text-align: center
+    .enter-personal-page
+      padding: 10px 0
+      background-color: #0f4d7c
+      &:hover
+        background-color: #990000
+  .row-description
+    padding: 0
+  .services-content
+    .pull-right
+      width: 100%
+  .services-item__wrapp
+    float: right
+    width: 100%
+  .service-item__responsive
+    margin: 0 0 20px 0
+  .col-xs-9
+    margin-left: 15%
+  .blog-post-container
+    img
+      width: 100%
+    .blog-post-container__text
+      position: static
+      width: 100%
+      .blog-post-container__text-link
+        position: static
+  .post-container
+    padding: 0
+
+@media (min-width: 1200px)
+  .header
+    .container
+      width: 1300px
+@media screen and (min-width: 800px)
+  .header-nav
+    margin: 0
 
 
 
